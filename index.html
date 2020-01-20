@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+<header id="header"><div class="in-header"><div class="logo">Charts</div><div class="slogan">Telegram spring competition</div></div></header>
+<div id="mainContainer" class="mainContainer">
+
+    <div class="title">Followers</div>
+<p></p>
+
+<svg id="chart"  version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="graph" aria-labelledby="title" role="img">
+
+    <g id="hoverLine"></g>
+    <g class="grid x-grid" id="xGridDynamic"></g>
+    <g class="grid x-grid" id="xGrid">
+        <line x1="0" x2="600" y1="468" y2="468"></line>
+    </g>
+    <g id="x-labels" class="labels x-labels">
+    </g>
+    <g id="y-labels" class="labels y-labels">
+
+    </g>
+    <g class="data" id="chartData"></g>
+    <defs>
+        <filter id="filter1">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"></feGaussianBlur> <!-- stdDeviation is how much to blur -->
+            <feOffset dx="0.1" dy="1" result="offsetblur"></feOffset> <!-- how much to offset -->
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.2"></feFuncA> <!-- slope is the opacity of the shadow -->
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode> <!-- this contains the offset blurred image -->
+                <feMergeNode in="SourceGraphic"></feMergeNode> <!-- this contains the element that the filter is applied to -->
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="info"></g>
+
+
+</svg>
+<p></p>
+<div id="slider">
+    <div id="firstMask" class="mask"></div>
+    <div id="bar" class="bar" data-start="00" data-end="00">
+        <div id="lp" class="lp" data-pos="0.3"></div>
+        <div id="periodLine" class="periodLine"></div>
+        <div id="rp" class="rp" data-pos="0.7"></div>
+    </div>
+    <div id="secondMask" class="mask"></div>
+</div>
+<svg id="sliderChart" viewBox="0 0 450 30" version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+    <g class="sliderChartData" id="sliderChartData">
+
+    </g>
+</svg>
+<p></p>
+<div id="inputCheckboxes" class="checkbox-wrapper"></div>
+<input type="checkbox" class="check">
+</div>
+<script type="text/javascript" src="chart_data.json"></script>
+<script src="range.js"></script>
+<script src="chart.js"></script>
+</body>
+</html>

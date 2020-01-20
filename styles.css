@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Berlin Sans FB Demi Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Berlin Sans FB Demi Bold'), url('fonts/BRLNSDB.woff') format('woff');
+}
+#chart * {
+    pointer-events: none;
+}
+.chart {
+    background: white;
+    width: 500px;
+    height: 100px;
+    border-left: 1px dotted #555;
+    border-bottom: 1px dotted #555;
+    padding: 20px 20px 20px 0;
+    transition: all 1s ease 1s
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    left: 0;
+    margin: 0;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    background: rgb(231, 235, 240);
+}
+.mainContainer {
+    width: 450px;
+    margin: 0 auto;
+    position: relative;
+    background: #ffffff;
+    padding: 20px;
+}
+.slogan {
+    text-align: center;
+    padding-top: 16px;
+}
+.logo {
+    display: inline-block;
+    font-family: 'Berlin Sans FB Demi Bold';
+    font-size: 40px;
+    position: absolute;
+}
+.logo, .slogan {
+    text-transform: uppercase;
+}
+#header {
+    background: #5682a3;
+    color: #FFFFFF;
+    height: 50px;
+}
+.in-header {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.title {
+    font-weight: bold;
+    fill: #000000;
+    font-size: 21px;
+    margin: 20px;
+}
+.graph .labels.x-labels {
+    text-anchor: middle;
+}
+
+.graph .labels.y-labels {
+    text-anchor: start;
+}
+
+
+.graph {
+    height: 490px;
+    width: 450px;
+}
+
+.graph .grid {
+    stroke: #e6e3e3;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+}
+
+.labels {
+}
+
+.label-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    fill: black;
+}
+
+.data {
+    fill: red;
+    stroke-width: 1;
+}
+text.axisText {
+    font-size: 14px;
+    fill: #909192;
+}
+
+
+/*Input Checkbxes styles*/
+#inputCheckboxes {
+    display: flex;
+    margin-top: 100px;
+}
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    border: 1px solid #e6e3e3;
+    border-radius: 25px;
+    padding: 6px 20px 6px 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+#inputCheckboxes span.checkboxIcon {
+    width: 20px;
+    height: 20px;
+    content: "";
+    display: inline-block;
+    border-radius: 20px;
+    margin-right: 3px;
+    margin-bottom: -2px;
+    vertical-align: -2px;
+}
+input[type="checkbox"]:checked + label span.checkboxIcon {
+    background: url("./images/check.svg") center center no-repeat;
+    background-size: 18px;
+}
+#inputCheckboxes span.checkboxName {
+    vertical-align: 2px;
+    margin-left: 5px;
+    padding-left: 3px;
+}
+
+/*Range Slider Styles*/
+#sliderChart {
+    width:450px;
+    height:50px;
+    position: absolute;
+}
+#slider{
+    width:450px;
+    height:50px;
+   /* background:rgba(228, 238, 253, 0.3);*/
+    z-index: 100;
+    position: absolute;
+}
+#slider .bar{
+    position:absolute;
+    left:50px;
+    width:300px;
+    background: #d2e3ea;
+    height:1px;
+    z-index: 110;
+}
+#slider .bar #lp span{
+    position:relative;
+    left:-30px;
+}
+#slider .bar #rp span{
+    position:relative;
+    left:10px;
+}
+#slider .bar #lp,#slider .bar #rp{
+    cursor: pointer;
+    background: rgba(171, 200, 225, 0.5);
+    width: 6px;
+    height: 50px;
+    position: absolute;
+}
+#slider .bar #lp{
+    left:0;
+    top:0;
+}
+#slider .bar #rp{
+    left:100%;
+    top:0;
+}
+#periodLine {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+#slider .mask {
+    background: rgba(228, 238, 253, 0.3);
+    height: 50px;
+    width: 100%;
+    position: absolute;
+}
+#slider #firstMask {
+    left: 0;
+}
+
+/*Hover information*/
+#hoverLine line {
+    stroke: #e6e3e3;
+}
+circle {
+    stroke-width: 2px;
+    fill: #ffffff;
+}
+text#textOutDate {
+    font-weight: bold;
+    font-size: 16px;
+}
+text.textOutValue {
+    font-weight: bold;
+}
+
+
+
+
+
